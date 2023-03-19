@@ -1,0 +1,106 @@
+let movieData = {
+  "The Darjeeling Limited": {
+    plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
+    cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
+    runtime: 151,
+    rating: 7.2,
+    year: 2007,
+  },
+  "The Royal Tenenbaums": {
+    plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
+    cast: ["Gene Hackman", "Gwnyeth Paltrow", "Anjelica Huston"],
+    runtime: 170,
+    rating: 7.6,
+    year: 2001,
+  },
+  "Fantastic Mr. Fox": {
+    plot: "An urbane fox cannot resist returning to his farm raiding ways and then must help his community survive the farmers' retaliation.",
+    cast: ["George Clooney", "Meryl Streep", "Bill Murray", "Jason Schwartzman",],
+    runtime: 147,
+    rating: 7.9,
+    year: 2009,
+    
+  },
+  "The Grand Budapest Hotel": {
+    plot: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+    cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
+    runtime: 159,
+    rating: 8.1,
+    year: 2014,
+    
+  },
+};
+
+const plotValue = movieData[The Darjeeling Limited].plot;
+    plotValue.push[str(input("update the plot of The Darjeeling Limited here: "))];
+    delete plotValue[str(input("delete parts of the plot of The Darjeeling Limited by typing the words you wish to remove here: "))];
+const castValue = movieData[The Darjeeling Limited].cast;
+    castValue.push[str(input("update the cast of The Darjeeling Limited here: "))];
+    delete castValue[str(input("delete cast members in The Darjeeling Limited by typing their names here: "))];
+const runtimeValue = movieData[The Darjeeling Limited].runtime;
+    runtimeValue.push[int(input("update the runtime of The Darjeeling Limited here: "))];
+    delete runtimeValue[str(input("delete the runtime of The Darjeeling Limited by typing their time to delete here: "))];;
+const ratingValue = movieData[The Darjeeling Limited].rating;
+    ratingValue.push[range(input("update the rating of The Darjeeling Limited here: "))];
+    delete ratingValue[str(input("delete rating of The Darjeeling Limited by typing the rating here: "))];;
+const yearValue = movieData.[The Darjeeling Limited].year;
+    yearValue.push[int(input("update the year of The Darjeeling Limited here: "))];
+    delete yearValue[str(input("delete the year The Darjeeling Limited was made by typing the year here: "))];;
+
+const plotValue1 = movieData[The Royal Tenenbaums].plot;
+    plotValue1.push[str(input("update the plot of The Royal Tenenbaums here: "))];
+    delete plotValue1[str(input("delete parts of the plot of The Royal Tenenbaums by typing the words you wish to remove here: "))];
+const castValue1 = movieData[The Royal Tenenbaums].cast;
+    castValue1.push[str(input("update the cast of The Darjeeling Limited here: "))];
+    delete castValue1[str(input("delete cast members in The Royal Tenenbaums by typing their names here: "))];
+const runtimeValue1 = movieData[The Royal Tenenbaums].runtime;
+    runtimeValue1.push[int(input("update the runtime of The Royal Tenenbaums here: "))];
+    delete runtimeValue1[str(input("delete the runtime of The Royal Tenenbaums by typing their time to delete here: "))];;
+const ratingValue1 = movieData[The Royal Tenenbaums].rating;
+    ratingValue1.push[range(input("update the rating of The Royal Tenenbaums here: "))];
+    delete ratingValue1[str(input("delete rating of The Royal Tenenbaums by typing the rating here: "))];;
+const yearValue1 = movieData.[The Royal Tenenbaums].year;
+    yearValue1.push[int(input("update the year of The Royal Tenenbaums here: "))];
+    delete yearValue1[str(input("delete the year The Royal Tenenbaums was made by typing the year here: "))];;
+
+    const plotValue2 = movieData[Fantastic Mr. Fox].plot;
+    plotValue2.push[str(input("update the plot of Fantastic Mr. Fox here: "))];
+    delete plotValue2[str(input("delete parts of the plot of Fantastic Mr. Fox by typing the words you wish to remove here: "))];
+const castValue2 = movieData[Fantastic Mr. Fox].cast;
+    castValue2.push[str(input("update the cast of Fantastic Mr. Fox here: "))];
+    delete castValue2[str(input("delete cast members in Fantastic Mr. Fox by typing their names here: "))];
+const runtimeValue2 = movieData[Fantastic Mr. Fox].runtime;
+    runtimeValue2.push[int(input("update the runtime of Fantastic Mr. Fox here: "))];
+    delete runtimeValue2[str(input("delete the runtime of Fantastic Mr. Fox by typing their time to delete here: "))];;
+const ratingValue2 = movieData[Fantastic Mr. Fox].rating;
+    ratingValue2.push[range(input("update the rating of Fantastic Mr. Fox here: "))];
+    delete ratingValue2[str(input("delete rating of Fantastic Mr. Fox by typing the rating here: "))];;
+const yearValue2 = movieData.[Fantastic Mr. Fox].year;
+    yearValue2.push[int(input("update the year of Fantastic Mr. Fox here: "))];
+    delete yearValue2[str(input("delete the year Fantastic Mr. Fox was made by typing the year here: "))];;
+
+    const plotValue3 = movieData[The Grand Budapest Hotel].plot;
+    plotValue3.push[str(input("update the plot of The Grand Budapest Hotel here: "))];
+    delete plotValue3[str(input("delete parts of the plot of The Grand Budapest Hotel by typing the words you wish to remove here: "))];
+const castValue3 = movieData[The Grand Budapest Hotel].cast;
+    castValue3.push[str(input("update the cast of The Grand Budapest Hotel here: "))];
+    delete castValue3[str(input("delete cast members in The Grand Budapest Hotel by typing their names here: "))];
+const runtimeValue3 = movieData[The Grand Budapest Hotel].runtime;
+    runtimeValue3.push[int(input("update the runtime of The Grand Budapest Hotel here: "))];
+    delete runtimeValue3[str(input("delete the runtime of The Grand Budapest Hotel by typing their time to delete here: "))];;
+const ratingValue3 = movieData[The Grand Budapest Hotel].rating;
+    ratingValue3.push[range(input("update the rating of The Grand Budapest Hotel here: "))];
+    delete ratingValue3[str(input("delete rating of The Grand Budapest Hotel by typing the rating here: "))];;
+const yearValue3 = movieData.[The Grand Budapest Hotel].year;
+    yearValue3.push[int(input("update the year of The Grand Budapest Hotel here: "))];
+    delete yearValue3[str(input("delete the year The Grand Budapest Hotel was made by typing the year here: "))];;
+
+
+# Store the object below in a JavaScript file in your codebase
+Render the data onto the webpage with DOM Manipulation
+Allow the user to affect the display of the data by interacting with the webpage
+
+Allow the user to update the data stored in the object by interacting with the webpage.
+
+
+
