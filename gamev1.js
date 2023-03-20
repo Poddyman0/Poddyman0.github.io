@@ -54,11 +54,11 @@ function compare(playerChoice, computerChoice){
   <body>
   
   <script>
-  console.log(compare(playerChoice, computerChoice));
-  console.log("Wow, you played " + count + " games!");
-  </script>
-  
-  </body>
-  </html>
+document.(compare(playerChoice, computerChoice));
+document.("Wow, you played " + count + " games!");
+</script>
+
+</body>
+</html>
         
       
