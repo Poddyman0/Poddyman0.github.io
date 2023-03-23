@@ -1,4 +1,4 @@
-
+<script>
 count = 1;
 var Decisions = function() {
     if (count === 1) {
@@ -47,5 +47,5 @@ function compare(playerChoice, computerChoice){
   }
   console.log(compare(playerChoice, computerChoice));
   console.log("Wow, you played " + count + " games!");
-        
+  </script>
       
