@@ -1,8 +1,8 @@
-<script src='JavaScript3.js'>
+<script url='https://poddyman0.github.io/moviedata/JavaScript3.js'>
     
 document.addEventListener('JavaScript3.js', ()=>{ all your code })
  function fetchData() {
-    fetch('https://poddyman0.github.io/JavaScript3.js')
+    fetch('https://poddyman0.github.io/moviedata/JavaScript3.js')
     .then( response => response.json() )
     .then( data => render movieData(data) ) 
 }
@@ -45,7 +45,7 @@ for (const q of data) {
     dislikesBtn.addEventListener('click', () => deleteQuote())
 
      function deleteQuote(){
-        const url = https://poddyman0.github.io/JavaScript3.js;
+        const url = 'https://poddyman0.github.io/moviedata/JavaScript3.js';
         const reqObj = { method: 'DELETE' };
         fetch(src, reqObj)
         .then( movieData2.remove() )
@@ -57,7 +57,7 @@ for (const q of data) {
 <h1>movie data</h1>
   <div>
     <div>
-        <script src="src/index.js"></script>
+        <script url= 'https://poddyman0.github.io/moviedata/JavaScript3.js'></script>
         <ul id="MovieData"></ul>
     </div>
     <div>
@@ -67,23 +67,23 @@ for (const q of data) {
             <input type="text" class="form-control" id="new-movie" placeholder="Movie:">
           </div>
           <div class="form-group">
-            <label for="new-plot">Author</label>
+            <label for="new-plot">new plot</label>
             <input type="text" class="form-control" id="new-plot" placeholder="Plot:">
           </div>
           <div class="form-group">
-            <label for="new-cast">Author</label>
+            <label for="new-cast">new cast</label>
             <input type="text" class="form-control" id="new-cast" placeholder="cast:">
           </div>
           <div class="form-group">
-            <label for="new-runtime">Author</label>
+            <label for="new-runtime">new runtime</label>
             <input type="text" class="form-control" id="new-runtime" placeholder="runtime:">
           </div>
           <div class="form-group">
-            <label for="new-rating">Author</label>
+            <label for="new-rating">new rating</label>
             <input type="text" class="form-control" id="new-rating" placeholder="rating: ">
           </div>
           <div class="form-group">
-            <label for="new-year">Author</label>
+            <label for="new-year">new year</label>
             <input type="text" class="form-control" id="new-year" placeholder="year: ">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -101,7 +101,7 @@ for (const q of data) {
         const newRating = document.querySelector('#new-rating').value;
         const newYear = document.querySelector('#new-year').value;
       }
-    const url = https://poddyman0.github.io/JavaScript3.js;
+    const url = 'https://poddyman0.github.io/moviedata/JavaScript3.js';
     const reqObj = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
