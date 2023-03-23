@@ -1,4 +1,47 @@
 <font face="Arial" or "textFont">  
+<label for="choosecolour">Don't like the background colours used in this website? Choose a new colour below</label>
+
+<select name="choosecolour" id="choosecolour">
+  <option value="Red">Red</option>
+  <option value="Green">Green</option>
+  <option value="Blue">Blue</option>
+</select>
+<script>
+let X = "";
+document.getElementById("choosecolour").addEventListener("change", function() {
+  if (this.value === "Red") {
+    X = "rgb(255, 0, 0)";
+  } else if (this.value === "Green") {
+    X = "rgb(153, 255, 153)";
+  } else if (this.value === "Blue") {
+    X = "rgb(153, 204, 255)";
+  }
+  document.body.style.backgroundColor = X;
+});
+</script>
+
+<label for="choosefont">Don't like the font used in this website? Choose a new font below</label>
+
+<select name="choosefont" id="choosefont">
+  <option value="Arial">Arial</option>
+  <option value="Times New Roman">Times New Roman</option>
+  <option value="Courier New">Courier New</option>
+  <option value="Brush Script MT">Brush Script MT</option>
+</select>
+<script>
+let textFont = "";
+document.getElementById("choosefont").addEventListener("change", function() {
+  if (this.value === "Arial") {
+    textFont = "Arial";
+  } else if (this.value === "Times New Roman") {
+    textFont = "Times New Roman";
+  } else if (this.value === "Courier New") {
+    textFont = "Courier New";
+  } else if (this.value === "Brush Script MT") {
+    textFont = "Brush Script MT";
+  }
+  document.body.style.fontFamily = textFont;
+});
 <!DOCTYPE html>
 <html>
 <main>
@@ -80,49 +123,7 @@
     </article>
 </section>
 <div><p src='https://github.com/Poddyman0/Poddyman0.github.io/blob/main/website.html'></p>Click this link to acess github repository that contains code for this site</div>
-<label for="choosecolour">Don't like the background colours used in this website? Choose a new colour below</label>
 
-<select name="choosecolour" id="choosecolour">
-  <option value="Red">Red</option>
-  <option value="Green">Green</option>
-  <option value="Blue">Blue</option>
-</select>
-<script>
-let X = "";
-document.getElementById("choosecolour").addEventListener("change", function() {
-  if (this.value === "Red") {
-    X = "rgb(255, 0, 0)";
-  } else if (this.value === "Green") {
-    X = "rgb(153, 255, 153)";
-  } else if (this.value === "Blue") {
-    X = "rgb(153, 204, 255)";
-  }
-  document.body.style.backgroundColor = X;
-});
-</script>
-
-<label for="choosefont">Don't like the font used in this website? Choose a new font below</label>
-
-<select name="choosefont" id="choosefont">
-  <option value="Arial">Arial</option>
-  <option value="Times New Roman">Times New Roman</option>
-  <option value="Courier New">Courier New</option>
-  <option value="Brush Script MT">Brush Script MT</option>
-</select>
-<script>
-let textFont = "";
-document.getElementById("choosefont").addEventListener("change", function() {
-  if (this.value === "Arial") {
-    textFont = "Arial";
-  } else if (this.value === "Times New Roman") {
-    textFont = "Times New Roman";
-  } else if (this.value === "Courier New") {
-    textFont = "Courier New";
-  } else if (this.value === "Brush Script MT") {
-    textFont = "Brush Script MT";
-  }
-  document.body.style.fontFamily = textFont;
-});
 
 </script>
 </main>
@@ -130,11 +131,4 @@ document.getElementById("choosefont").addEventListener("change", function() {
 <footer>Made by George Mitchell</footer>
 </html>
 
-to do:
-- drop down menue to change colour of website.
-- dropdown menu to change text.
-- fill in answers to questions.
 
-//hosted of github pages
-// DOM event listeners for user interaction (e.g. click, keydown)
-DOM updates in response to user interaction (e.g. changing text or styles)
