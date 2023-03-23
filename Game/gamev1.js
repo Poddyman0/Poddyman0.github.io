@@ -47,17 +47,5 @@ function compare(playerChoice, computerChoice){
   }
   console.log(compare(playerChoice, computerChoice));
   console.log("Wow, you played " + count + " games!");
-
-  <!DOCTYPE html>
-  <html>
-  <body>
-  
-  <script>
-  console.log(compare(playerChoice, computerChoice));
-  console.log("Wow, you played " + count + " games!");
-  </script>
-  
-  </body>
-  </html>
         
       
