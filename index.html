@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<font face="textFont">  
+
 <label for="choosecolour">Don't like the background colours used in this website? Choose a new colour below</label>
 
 <select name="choosecolour" id="choosecolour">
@@ -12,7 +12,7 @@
 let X = "";
 document.getElementById("choosecolour").addEventListener("change", function() {
   if (this.value === "Red") {
-    X = "rgb(255, 0, 0)";
+    X = "rgb(233, 30, 99)";
   } else if (this.value === "Green") {
     X = "rgb(153, 255, 153)";
   } else if (this.value === "Blue") {
@@ -45,6 +45,7 @@ document.getElementById("choosefont").addEventListener("change", function() {
   document.body.style.fontFamily = textFont;
 });
 </script>
+<body>
 <main>
    <header>Website</header>
 <style>
@@ -125,11 +126,11 @@ document.getElementById("choosefont").addEventListener("change", function() {
 </section>
 <section>
   <div>
-    <p src='https://github.com/Poddyman0/Poddyman0.github.io/blob/main/website.html'>Click this link to acess github repository that contains code for this site</p>
+    <p1 href='https://github.com/Poddyman0/Poddyman0.github.io/'>Click this link to acess github repository that contains code for this site</p1>
   </div>
 </section>
 </main>
-</font>
+</body>
 <footer>Made by George Mitchell</footer>
 </html>
 
