@@ -1,115 +1,41 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Rock Paper Scissors Game</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    #game-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    #game-container h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    #game-container button {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 0.5rem;
-      background-color: #007bff;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    #game-container button:hover {
-      background-color: #0062cc;
-    }
-
-    #game-container p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-    }
-
-    #game-container #result {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <div id="game-container">
-    <h1>Rock Paper Scissors Game</h1>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <p>Make your choice and click a button to play.</p>
-    <p id="result"></p>
-  </div>
-
-  <script>
-    let count = 1;
-    let playerChoice, computerChoice;
-    const choices = document.querySelectorAll('button');
-    const result = document.getElementById('result');
-
-    function Decisions() {
-      if (count === 1) {
-        playerChoice = prompt("Do you choose rock, paper or scissors?");
-      } else {
-        playerChoice = prompt("It's a tie. Please make your choice again! Do you choose rock, paper or scissors?");
-      }
-      computerChoice = Math.ceil(Math.random() * 3);
-      if (computerChoice === 1) {
+<script>
+    var playerChoice = prompt("What is your choice of weapon: rock, paper, or scissors?");  
+    var computerChoice = Math.ceil(Math.random() *3);
+    if (computerChoice < 1) {
         computerChoice = "rock";
-      } else if (computerChoice === 2) {
+    } else if(1 <= computerChoice <= 2) {
         computerChoice = "paper";
-      } else {
+    } else {
         computerChoice = "scissors";
-      }
     }
-
-    function compare(playerChoice, computerChoice) {
-      if (playerChoice === computerChoice) {
-        count = count + 1;
-        result.textContent = "The result is a tie!";
-        Decisions();
-        return compare(playerChoice, computerChoice);
-      }
-      if (playerChoice === "rock") {
-        if (computerChoice === "scissors") {
-          return "Player Wins";
-        } else {
-          return "Computer Wins";
+  
+    function game(playerChoice, computerChoice){
+    if (playerChoice === computerChoice) {
+          return "It is a tie";
         }
-      }
-      if (playerChoice === "paper") {
-        if (computerChoice === "scissors") {
-          return "Computer Wins";
-        } else {
-          return "Player Wins";
+        if (playerChoice === "rock") {
+          if (computerChoice === "scissors") {
+            return "Player Wins";
+          } else {
+            return "Computer Wins";
+          }
         }
-      }
-      if (playerChoice === "scissors") {
-        if (computerChoice === "rock") {
-          return "Computer Wins";
-        } else {
-          return "Player Wins";
+        if (playerChoice === "paper") {
+          if (computerChoice === "scissors") {
+            return "Computer Wins";
+          } else {
+            return "Player Wins";
+          }
         }
-      }
+        if (playerChoice === "scissors") {
+          if (computerChoice === "rock") {
+            return "Computer Wins";
+          } else {
+                    return "Player Wins";
+          }
+        }
     }
-
-    function playGame(e) {
-      playerChoice = e.target.id;
-      let resultText = compare(playerChoice, computerChoice);
-      result.textContent = resultText;
-      count++;
+    
+    game();
+    console.log(game(playerChoice, computerChoice))
+</script>
