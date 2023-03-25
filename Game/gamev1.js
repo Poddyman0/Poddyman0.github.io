@@ -1,52 +1,54 @@
-let count = 1;
-let playerChoice, computerChoice;
-
-function Decisions() {
-  if (count === 1) {
-    playerChoice = prompt("Do you choose rock, paper or scissors?");
-  } else {
-    playerChoice = prompt("It's a tie. Please make your choice again! Do you choose rock, paper or scissors?");
-  }
-  computerChoice = Math.ceil(Math.random() * 3);
-  if (computerChoice === 1) {
-    computerChoice = "rock";
-  } else if (computerChoice === 2) {
-    computerChoice = "paper";
-  } else {
-    computerChoice = "scissors";
-  }
-}
-
-function compare(playerChoice, computerChoice) {
-  if (playerChoice === computerChoice) {
-    count = count + 1;
-    console.log("The result is a tie!");
-    Decisions();
-    return compare(playerChoice, computerChoice);
-  }
-  if (playerChoice === "rock") {
-    if (computerChoice === "scissors") {
-      return "Player Wins";
+//player choice
+    var playerChoice = prompt("What is your choice of weapon: rock, paper, or scissors?");
+    
+    //Computer Choice
+    var computerChoice = Math.ceil(Math.random() *3);
+    
+    //variables as numbers
+    if (computerChoice < 1) {
+        computerChoice = "rock";
+    } else if(1 <= computerChoice <= 2) {
+        computerChoice = "paper";
     } else {
-      return "Computer Wins";
+        computerChoice = "scissors";
     }
-  }
-  if (playerChoice === "paper") {
-    if (computerChoice === "scissors") {
-      return "Computer Wins";
-    } else {
-      return "Player Wins";
+    
+    
+    //defining function
+    function game(playerChoice, computerChoice){
+    
+    //Checking for a tie
+    if (playerChoice === computerChoice) {
+          return "It is a tie";
+        }
+    
+        //Check for Rock
+        if (playerChoice === "rock") {
+          if (computerChoice === "scissors") {
+            return "Player Wins";
+          } else {
+            return "Computer Wins";
+          }
+        }
+        //Check for Paper
+        if (playerChoice === "paper") {
+          if (computerChoice === "scissors") {
+            return "Computer Wins";
+          } else {
+            return "Player Wins";
+          }
+        }
+        //Check for Scissors
+        if (playerChoice === "scissors") {
+          if (computerChoice === "rock") {
+            return "Computer Wins";
+          } else {
+                    return "Player Wins";
+          }
+        }
     }
-  }
-  if (playerChoice === "scissors") {
-    if (computerChoice === "rock") {
-      return "Computer Wins";
-    } else {
-      return "Player Wins";
-    }
-  }
-}
-
-Decisions();
-console.log(compare(playerChoice, computerChoice));
-console.log("Wow, you played " + count + " games!");
+    
+    //start the game function
+    game();
+    //print winner
+    console.log(game(playerChoice, computerChoice))
