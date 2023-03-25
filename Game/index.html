@@ -40,7 +40,7 @@ George Mitchell's website
 <main>
 <html>
 <h1>Rock Paper Scissors</h1>
-  <body style="font:"Arial"; justify-content: center;  padding: 10px;  background-color:MediumSeaGreen; border: 2px solid black>
+  <body style="font:"Arial"; justify-content: center;  padding: 10px;  background-color:MediumSeaGreen; border: 2px solid black;">
     <p>Choose your weapon:</p>
     <button onclick="play('rock')">Rock</button>
     <button onclick="play('paper')">Paper</button>
@@ -64,15 +64,15 @@ George Mitchell's website
 
       function game(playerChoice, computerChoice) {
         if (playerChoice === computerChoice) {
-          return "It's a tie!";
+          return "It's a tie! Refresh this page to play again.";
         } else if (
           (playerChoice === "rock" && computerChoice === "scissors") ||
           (playerChoice === "paper" && computerChoice === "rock") ||
           (playerChoice === "scissors" && computerChoice === "paper")
         ) {
-          return "You win!";
+          return "You win! Refresh this page to play again.";
         } else {
-          return "Computer wins!";
+          return "Computer wins! Refresh this page to play again.";
         }
       }
     </script>
