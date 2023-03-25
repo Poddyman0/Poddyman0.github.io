@@ -1,43 +1,44 @@
-<script>
-    var playerChoice = prompt("What is your choice of weapon: rock, paper, or scissors?");  
-    var computerChoice = Math.ceil(Math.random() *3);
-    if (computerChoice < 1) {
-        computerChoice = "rock";
-    } else if(1 <= computerChoice <= 2) {
-        computerChoice = "paper";
-    } else {
-        computerChoice = "scissors";
-    }
-  
-    function game(playerChoice, computerChoice){
-    if (playerChoice === computerChoice) {
-          return "It is a tie";
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <p>Choose your weapon:</p>
+    <button onclick="play('rock')">Rock</button>
+    <button onclick="play('paper')">Paper</button>
+    <button onclick="play('scissors')">Scissors</button>
+    <p id="result"></p>
+
+    <script>
+      function play(playerChoice) {
+        var computerChoice = Math.ceil(Math.random() * 3);
+        if (computerChoice === 1) {
+          computerChoice = "rock";
+        } else if (computerChoice === 2) {
+          computerChoice = "paper";
+        } else {
+          computerChoice = "scissors";
         }
-        if (playerChoice === "rock") {
-          if (computerChoice === "scissors") {
-            return "Player Wins";
-          } else {
-            return "Computer Wins";
-          }
+
+        var result = game(playerChoice, computerChoice);
+        document.getElementById("result").innerHTML = result;
+      }
+
+      function game(playerChoice, computerChoice) {
+        if (playerChoice === computerChoice) {
+          return "It's a tie!";
+        } else if (
+          (playerChoice === "rock" && computerChoice === "scissors") ||
+          (playerChoice === "paper" && computerChoice === "rock") ||
+          (playerChoice === "scissors" && computerChoice === "paper")
+        ) {
+          return "You win!";
+        } else {
+          return "Computer wins!";
         }
-        if (playerChoice === "paper") {
-          if (computerChoice === "scissors") {
-            return "Computer Wins";
-          } else {
-            return "Player Wins";
-          }
-        }
-        if (playerChoice === "scissors") {
-          if (computerChoice === "rock") {
-            return "Computer Wins";
-          } else {
-                    return "Player Wins";
-          }
-        }
-    }
-    
-    game();
-    console.log("User Choice: " + playerChoice);
-    console.log("Computer Choice: " + computerChoice);
-    console.log(game(playerChoice, computerChoice));
-</script>
+      }
+    </script>
+  </body>
+</html>
