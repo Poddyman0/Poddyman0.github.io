@@ -7,20 +7,20 @@ George Mitchell's Website
 	<title>Change Background Color and Font Family</title>
 	<style>
 		body {
-			background-color: rgb(153, 255, 153);
+			background-colour: white;
 			font-family: Arial;
 		}
 	</style>
 </p>
 <body>
-	<label for="choosecolour">Don't like the background color used in this website? Choose a new color below</label>
+	<label for="choosecolour">Don't like the box background color used in this website? Choose a new color below</label>
 <select name="choosecolour" id="choosecolour">
   <option value="rgb(255, 0, 0)">Red</option>
   <option value="MediumSeaGreen" selected>Green</option>
   <option value="rgb(153, 204, 255)">Blue</option>
 </select>
 <script>
-	const selectBox = document.querySelector(".box");
+	const selectBox = document.getElementById(".box");
 	let selectedColor = document.getElementById("choosecolour").value;
 
 	document.getElementById("choosecolour").addEventListener("change", function() {
@@ -46,8 +46,7 @@ George Mitchell's Website
 		  document.body.style.fontFamily = selectedFont;
 		});
 	</script>
-
-<font = "textFont">
+<font = "selectedFont">
 <style>
 .topnav {
   background-color: #333;
@@ -80,15 +79,17 @@ George Mitchell's Website
 </nav>
 <main>
 	<h1>Website</h1>
+
 <style>
     .box {
       display: flex;
       flex-flow: row wrap;
+	    Background: "selectedColour"
     }
     
     @media (max-width: 400px) {
       .flex-container {
-        flex-direction: column;
+        flex-direction: column
       }
     }
     
@@ -96,7 +97,6 @@ George Mitchell's Website
       flex: 1 1 25%;
       justify-content: center;
       padding: 10px;
-      background-color: selectedColor ;
       border: 2px solid currentcolor
       
     }
