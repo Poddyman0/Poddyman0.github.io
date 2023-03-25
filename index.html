@@ -22,11 +22,11 @@ George Mitchell's Website
 	</select>
 	<script>
 		let selectedColor = document.getElementById("choosecolour").value;
-		document.body.style.backgroundColor = selectedColor;
+		
 
 		document.getElementById("choosecolour").addEventListener("change", function() {
 		  let selectedColor = this.value;
-		  document.body.style.backgroundColor = selectedColor;
+		 
 		});
 	</script>
 
@@ -97,7 +97,7 @@ George Mitchell's Website
       flex: 1 1 25%;
       justify-content: center;
       padding: 10px;
-      background-color: X ;
+      background-color: selectedColor ;
       border: 2px solid currentcolor
       
     }
