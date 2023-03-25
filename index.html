@@ -22,11 +22,11 @@ George Mitchell's Website
 	</select>
 	<script>
 		let selectedColor = document.getElementById("choosecolour").value;
-		document.boxcolour.style.background-colour = selectedColour;
+		document.body.style.background-colour = selectedColour;
 
 		document.getElementById("choosecolour").addEventListener("change", function() {
 		  let selectedColor = this.value;
-		 document.boxcolour.background-colour = selectedColour;
+		 document.body.background-colour = selectedColour;
 		});
 	</script>
 
