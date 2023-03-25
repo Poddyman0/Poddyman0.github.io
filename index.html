@@ -16,16 +16,16 @@ George Mitchell's Website
 	<label for="choosecolour">Don't like the box background color used in this website? Choose a new color below</label>
 <select name="choosecolour" id="choosecolour">
   <option value="rgb(255, 0, 0)">Red</option>
-  <option value="MediumSeaGreen" selected>Green</option>
+  <option value="MediumSeaGreen">Green</option>
   <option value="rgb(153, 204, 255)">Blue</option>
 </select>
 <script>
-	const selectBox = document.getElementById(".box");
 	let selectedColor = document.getElementById("choosecolour").value;
+	boxy.style.backgroundColor = selectedColor
 
 	document.getElementById("choosecolour").addEventListener("change", function() {
-	  selectedColor = this.value;
-	  selectBox.style.backgroundColor = selectedColor;
+	  let selectedColor = this.value;
+	  boxy.style.backgroundColor = selectedColor;
 	});
 </script>
 
@@ -79,12 +79,11 @@ George Mitchell's Website
 </nav>
 <main>
 	<h1>Website</h1>
-
+<boxy>
 <style>
     .box {
       display: flex;
       flex-flow: row wrap;
-	    Background: "selectedColour"
     }
     
     @media (max-width: 400px) {
@@ -126,6 +125,7 @@ George Mitchell's Website
       <p id="four" style="display:none;">ENTER TEXT HERE</p>
     </article>
 </section>
+</boxy>
    <script>
   function toggle(id) {
     var p = document.getElementById(id);
