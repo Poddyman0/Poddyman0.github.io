@@ -41,19 +41,21 @@ George Mitchell's website
 <html>
 <h1>Rock Paper Scissors</h1>
   <body>
-  <div class="text-box">
+   <div class="text-box">
     <p>Choose your weapon:</p>
     <button onclick="play('rock')">Rock</button>
     <button onclick="play('paper')">Paper</button>
     <button onclick="play('scissors')">Scissors</button>
     <p id="result"></p>
-   </div>
+    </div>
+    <CSS>
      .text-box {
   border: 2px solid black;
   background-color: MediumSeaGreen;
   padding: 10px;
   text-align: center;
 }
+    </CSS>
     <script>
       function play(playerChoice) {
         var computerChoice = Math.ceil(Math.random() * 3);
