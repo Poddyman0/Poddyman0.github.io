@@ -3,42 +3,46 @@ George Mitchell's Website
 </header>
 <html>
 	<label for="choosecolour">Don't like the box background color used in this website? Choose a new color below</label>
-    <select name="choosecolour" id="choosecolour">
-      <option value="MediumSeaGreen" selected>Green</option>
-      <option value="rgb(255, 102, 102)">Red</option>
-      <option value="rgb(153, 153, 255)">Blue</option>
-    </select>
+<select name="choosecolour" id="choosecolour">
+	<option value="MediumSeaGreen" selected>Green</option>
+	<option value="rgb(255, 102, 102)">Red</option>
+	<option value="rgb(153, 153, 255)">Blue</option>
+</select>
+	<label for="choosefont">Don't like the font used in this website? Choose a new font below</label>
+<select name="choosefont" id="choosefont">
+  <option value="Arial" selected>Arial</option>
+  <option value="Courier New">Courier New</option>
+  <option value="Brush Script MT">Brush Script MT</option>
+</select>
 
-    <label for="choosefont">Don't like the font used in this website? Choose a new font below</label>
-    <select name="choosefont" id="choosefont">
-      <option value="Arial" selected>Arial</option>
-      <option value="Courier New">Courier New</option>
-      <option value="Brush Script MT">Brush Script MT</option>
-    </select>
+<script>
+  let selectedColor = document.getElementById("choosecolour").value;
+  let selectedFont = document.getElementById("choosefont").value;
 
-    <script>
-      let selectedColor = document.getElementById("choosecolour").value;
-      let selectedFont = document.getElementById("choosefont").value;
+  document.getElementById("choosecolour").addEventListener("change", function () {
+    selectedColor = this.value;
+    updateBoxes();
+  });
 
-      document.getElementById("choosecolour").addEventListener("change", function () {
-        selectedColor = this.value;
-        updateBoxes();
-      });
+  document.getElementById("choosefont").addEventListener("change", function () {
+    selectedFont = this.value;
+    document.body.style.fontFamily = selectedFont;
+  });
 
-      document.getElementById("choosefont").addEventListener("change", function () {
-        selectedFont = this.value;
-        document.body.style.fontFamily = selectedFont;
-      });
-
-      function updateBoxes() {
-        const boxes = document.querySelectorAll(".box .one, .box .two, .box .three, .box .four");
-        boxes.forEach((box) => {
-          box.style.backgroundColor = selectedColor;
-        });
+  function updateBoxes() {
+    const boxes = document.querySelectorAll(".box .one, .box .two, .box .three, .box .four");
+    boxes.forEach((box) => {
+      box.style.backgroundColor = selectedColor;
+    });
   }
 
-      updateBoxes();
-    </script>
+  document.body.style.fontFamily = selectedFont;
+  document.querySelectorAll(".box .one, .box .two, .box .three, .box .four").forEach((box) => {
+    box.style.backgroundColor = "MediumSeaGreen";
+  });
+  
+  updateBoxes();
+</script>
 
 <body>
 	
