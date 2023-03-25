@@ -14,21 +14,20 @@ George Mitchell's Website
 </p>
 <body>
 	<label for="choosecolour">Don't like the background color used in this website? Choose a new color below</label>
+<select name="choosecolour" id="choosecolour">
+  <option value="rgb(255, 0, 0)">Red</option>
+  <option value="MediumSeaGreen" selected>Green</option>
+  <option value="rgb(153, 204, 255)">Blue</option>
+</select>
+<script>
+	const selectBox = document.querySelector(".box");
+	let selectedColor = document.getElementById("choosecolour").value;
 
-	<select name="choosecolour" id="choosecolour">
-	  <option value = "rgb(255, 0, 0)">Red</option>
-	  <option value = "MediumSeaGreen" selected>Green</option>
-	  <option value = "rgb(153, 204, 255)">Blue</option>
-	</select>
-	<script>
-		let selectedColor = document.getElementById("choosecolour").value;
-		document.body.style.background-colour = selectedColour;
-
-		document.getElementById("choosecolour").addEventListener("change", function() {
-		  let selectedColor = this.value;
-		 document.body.background-colour = selectedColour;
-		});
-	</script>
+	document.getElementById("choosecolour").addEventListener("change", function() {
+	  selectedColor = this.value;
+	  selectBox.style.backgroundColor = selectedColor;
+	});
+</script>
 
 	<label for="choosefont">Don't like the font used in this website? Choose a new font below</label>
 
