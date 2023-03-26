@@ -1,4 +1,5 @@
 Game Description:
+
 This is a webpage that displays a game of rock, paper, scissors. It includes HTML, CSS, and JavaScript code.
 
 The HTML code defines the layout of the webpage, including a header, navigation bar, and main content section. The navigation bar includes links to other pages on the website. The main content section displays the game and includes buttons for the player to choose rock, paper, or scissors.
