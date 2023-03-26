@@ -1,8 +1,52 @@
-<font face="Arial" or "textFont">  
-<!DOCTYPE html>
+<header>
+George Mitchell's Website
+</header>
 <html>
-<main>
-   <header>Website</header>
+	<label for="choosecolour">Don't like the box background color used in this website? Choose a new color below</label>
+<select name="choosecolour" id="choosecolour">
+	<option value="MediumSeaGreen" selected>Green</option>
+	<option value="rgb(255, 102, 102)">Red</option>
+	<option value="rgb(153, 153, 255)">Blue</option>
+</select>
+	<label for="choosefont">Don't like the font used in this website? Choose a new font below</label>
+<select name="choosefont" id="choosefont">
+  <option value="Arial" selected>Arial</option>
+  <option value="Courier New">Courier New</option>
+  <option value="Brush Script MT">Brush Script MT</option>
+</select>
+
+<script>
+  let selectedColor = document.getElementById("choosecolour").value;
+  let selectedFont = document.getElementById("choosefont").value;
+
+  document.getElementById("choosecolour").addEventListener("change", function () {
+    selectedColor = this.value;
+    updateBoxes();
+  });
+
+  document.getElementById("choosefont").addEventListener("change", function () {
+    selectedFont = this.value;
+    document.body.style.fontFamily = selectedFont;
+  });
+
+  function updateBoxes() {
+    const boxes = document.querySelectorAll(".box .one, .box .two, .box .three, .box .four");
+    boxes.forEach((box) => {
+      box.style.backgroundColor = selectedColor;
+    });
+  }
+
+  document.body.style.fontFamily = selectedFont;
+  document.querySelectorAll(".box .one, .box .two, .box .three, .box .four").forEach((box) => {
+    box.style.backgroundColor = "MediumSeaGreen";
+  });
+  
+  updateBoxes();
+</script>
+
+<body>
+	
+<font = "selectedFont">
 <style>
 .topnav {
   background-color: #333;
@@ -28,11 +72,13 @@
 </style>
 <nav class="topnav">
     <a class="active" href='https://poddyman0.github.io/website2.html'>Website Homepage</a>
-    <a href="https://poddyman0.github.io/hobbypagewebsite.html">Hobby Page Website</a>
-    <a href="https://poddyman0.github.io/MoviedataFINAL.html">Movie Data</a>
-    <a href="https://poddyman0.github.io/gamev1html.html">Rock, Paper, Scissors Game</a>
-    <a href="https://poddyman0.github.io/project gallery4.html">Project Gallery</a>
+    <a href='https://poddyman0.github.io/hobbywebsite/index.html'>Hobby Page Website</a>
+    <a href='https://poddyman0.github.io/moviedata/index.html'>Movie Data</a>
+    <a href='https://poddyman0.github.io/Game/index.html'>Rock, Paper, Scissors Game</a>
+    <a href='https://poddyman0.github.io/ProjectGallery/index.html'>Project Gallery</a>
 </nav>
+<main>
+	<h1>Website</h1>
 <style>
     .box {
       display: flex;
@@ -41,100 +87,59 @@
     
     @media (max-width: 400px) {
       .flex-container {
-        flex-direction: column;
+        flex-direction: column
       }
     }
     
     .one, .two, .three, .four {
-      flex: 1 1 25%;
-      justify-content: center;
-      padding: 10px;
-      background-color: X ;
-      border: 2px solid currentcolor
-      
+      	flex: 1 1 25%;
+     	justify-content: center;
+	padding: 10px;
+     	border: 2px solid black;      
     }
 </style>
-
 <section class="box">
     <article class="one" style>
         <h1>Who am i?</h1>
-        <p1 onclick="toggle('one')" style="background-color: X ; border: 1px solid currentcolor"></p1>>click here to find out more.</p1>
-        <p id="one" style="display:none;"> INSET TEXT HERE</p>
+        <p1 onclick="toggle('one')" ; style="background: rgb(233, 30, 99) ; border: 1px solid currentcolor">click here to find out more.</p1>
+        <p id="one" style="display:none;"; style="background-color: rgb(233, 30, 99) ; border: 1px solid currentcolor"> INSET TEXT HERE</p>
         <br>
         <img src="https://th.bing.com/th/id/OIP.yWUfmzhOd85_TSE7-ZwmOQHaE8?w=266&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="rock climbing website building" style="width:260px;height:160px;">
     </article>
     <article class="two">
         <h1>Why would I like to move into a career in web development?</h1>
-        <p1 onclick="toggle('two')" style="background-color: X ; border: 1px solid currentcolor"></p1>>click here to find out more.</p1>
+        <p1 onclick="toggle('two')" ; style="background: rgb(233, 30, 99) ; border: 1px solid currentcolor">click here to find out more.</p1>
         <p id="two" style="display:none;">INSERT TEXT HERE</p>
     </article>
     <article class="three">
         <h1>Why am i applying for the programme?</h1>
-        <p1 onclick="toggle('three')" style="background-color: X ; border: 1px solid currentcolor"></p1>>click here to find out more.</p1>
+        <p1 onclick="toggle('three')" ; style="background: rgb(233, 30, 99) ; border: 1px solid currentcolor">click here to find out more.</p1>
         <p id="three" style="display:none;">ENTER TEXT HERE</p>
     </article>
     <article class="four">
       <h1>What have i learnt so far?</h1>
-      <p1 onclick="toggle('four')" style="background-color: X ; border: 1px solid currentcolor">click here to find out more.</p1>
+      <p1 onclick="toggle('four')" ; style="background: rgb(233, 30, 99) ; border: 1px solid currentcolor">click here to find out more.</p1>
       <p id="four" style="display:none;">ENTER TEXT HERE</p>
     </article>
 </section>
-<div><p src='https://github.com/Poddyman0/Poddyman0.github.io/blob/main/website.html'></p>Click this link to acess github repository that contains code for this site</div>
-<label for="choosecolour">Don't like the background colours used in this website? Choose a new colour below</label>
 
-<select name="choosecolour" id="choosecolour">
-  <option value="Red">Red</option>
-  <option value="Green">Green</option>
-  <option value="Blue">Blue</option>
-</select>
-<script>
-let X = "";
-document.getElementById("choosecolour").addEventListener("change", function() {
-  if (this.value === "Red") {
-    X = "rgb(255, 0, 0)";
-  } else if (this.value === "Green") {
-    X = "rgb(153, 255, 153)";
-  } else if (this.value === "Blue") {
-    X = "rgb(153, 204, 255)";
+   <script>
+  function toggle(id) {
+    var p = document.getElementById(id);
+    if (p.style.display === 'none') {
+      p.style.display = 'block';
+    } else {
+      p.style.display = 'none';
+    }
   }
-  document.body.style.backgroundColor = X;
-});
-</script>
-
-<label for="choosefont">Don't like the font used in this website? Choose a new font below</label>
-
-<select name="choosefont" id="choosefont">
-  <option value="Arial">Arial</option>
-  <option value="Times New Roman">Times New Roman</option>
-  <option value="Courier New">Courier New</option>
-  <option value="Brush Script MT">Brush Script MT</option>
-</select>
-<script>
-let textFont = "";
-document.getElementById("choosefont").addEventListener("change", function() {
-  if (this.value === "Arial") {
-    textFont = "Arial";
-  } else if (this.value === "Times New Roman") {
-    textFont = "Times New Roman";
-  } else if (this.value === "Courier New") {
-    textFont = "Courier New";
-  } else if (this.value === "Brush Script MT") {
-    textFont = "Brush Script MT";
-  }
-  document.body.style.fontFamily = textFont;
-});
-
-</script>
+  </script>
+<section>
+  <div>
+   <a href='https://github.com/Poddyman0/Poddyman0.github.io/'>Click link to access Github repository code.</a>
+  </div>
+</section>
 </main>
-</font>
+</body>
 <footer>Made by George Mitchell</footer>
+</font>
 </html>
-
-to do:
-- drop down menue to change colour of website.
-- dropdown menu to change text.
-- fill in answers to questions.
-
-//hosted of github pages
-// DOM event listeners for user interaction (e.g. click, keydown)
-DOM updates in response to user interaction (e.g. changing text or styles)
