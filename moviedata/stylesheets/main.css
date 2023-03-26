@@ -1,11 +1,7 @@
 :root {
-  --primary-green: #4eb858;
-  --bg-dark-blue: #171e31;
-  --bg-darker-blue: #12192c;
-
-  --text-primary-white: white;
-  --text-secondary-grey: #ceced8;
-  --text-tertiary-grey: #565b6f;
+  --bg-primary-white: white;
+  
+  --text-primary-white: black;
 }
 
 *,
@@ -14,10 +10,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', arial;
   font-weight: 300;
   overflow: hidden;
-  /* border: 1px solid blue; */
+  /* border: 1px solid black; */
 }
 
 body {
@@ -52,7 +48,7 @@ body {
   width: 100vw;
   padding: 0.5rem 0rem;
   overflow: visible;
-  background: var(--bg-darker-blue);
+  background: var(--bg-primary-white);
 }
 @media only screen and (max-width: 992px) {
   .header__container {
@@ -65,14 +61,14 @@ body {
 .main {
   position: relative;
   display: block;
-  background: var(--bg-dark-blue);
+  background: var(--bg-primary-white);
   height: 100%;
   width: 100vw;
   overflow-y: scroll;
 }
 .main__fullscreen {
   position: relative;
-  background: var(--bg-dark-blue);
+  background: var(--bg-primary-white);
   height: calc(100% - 3.5rem);
   width: 100vw;
   overflow-y: scroll;
@@ -84,7 +80,7 @@ body {
   width: 100vw;
   height: 15rem;
   min-width: 320px;
-  background: var(--bg-dark-blue);
+  background: var(--bg-primary-white);
 }
 .moive_nav_HIDE {
   display: none;
