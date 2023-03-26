@@ -31,7 +31,6 @@ export const createNavButton = ({
   );
 
   const arrowImg = createElement("img", {
-    src: "./img/down.svg",
     class: "nav_sort_pulldown_arrow",
     id: "nav_sort_pulldown_arrow",
   });
