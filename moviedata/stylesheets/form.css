@@ -3,11 +3,11 @@
   display: block;
   width: 90%;
   max-width: 60rem;
-  background: var(--bg-darker-blue);
+  background: var(--bg-primary-white);
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 1rem;
-  color: var(--text-primary-white);
+  color: var(--text-primary-black);
 }
 @media only screen and (max-width: 451px) {
   .form__container {
@@ -33,11 +33,11 @@
   display: block;
   border: none;
   outline: none;
-  background: var(--bg-dark-blue);
+  background: var(--bg-primary-white);
   width: 90%;
   margin: 1.5rem auto;
   border-radius: 1rem;
-  color: var(--text-secondary-grey);
+  color: var(--text-primary-black);
   font-weight: 700;
   font-size: 1.2rem;
   padding: 0.8rem;
@@ -60,9 +60,9 @@
   -webkit-flex-grow: 1;
   border: none;
   outline: none;
-  background: var(--bg-dark-blue);
+  background: var(--bg-primary-white);
   border-radius: 1rem;
-  color: var(--text-secondary-grey);
+  color: var(--text-primary-black);
   font-weight: 700;
   font-size: 1.2rem;
   padding: 0.8rem;
@@ -91,7 +91,7 @@
   justify-content: center;
   border: none;
   outline: none;
-  background: var(--bg-dark-blue);
+  background: var(--bg-primary-white);
   width: 90%;
   height: 3rem;
   margin: 0 auto;
@@ -114,7 +114,7 @@
   font-weight: 700;
   font-size: 1.2rem;
   padding: 0.65rem 0;
-  color: rgb(206, 206, 216, 0.5);
+  color: var(--text-primary-black);
 }
 
 .form__submit_button {
@@ -125,7 +125,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-primary-white);
-  background: var(--primary-green);
+  background: var(--primary-red);
   border: none;
   border-radius: 0.5rem;
 }
