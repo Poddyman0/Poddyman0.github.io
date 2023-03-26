@@ -1,127 +1,41 @@
-<script src='JavaScript3.js'>
-    
-document.addEventListener('JavaScript3.js', ()=>{ all your code })
- function fetchData() {
-    fetch('https://poddyman0.github.io/JavaScript3.js')
-    .then( response => response.json() )
-    .then( data => render movieData(data) ) 
-}
-function render movieData(data) {
-for (const q of data) {
-    const movieData1 = movieData.querySelector('#movie-list');
-
-    const movieData2 = movideData = document.createElement('Movie Data');
-    const blockMovie = document.createElement('movie');
-    const plotValue = movieData.plot = document.createElement('plotValue')
-    const castValue = movieData.cast = document.createElement('castValue')
-    const runtimeValue = movieData.runtime  = document.createElement('runtimeValue')
-    const ratingValue = movieData.rating  = document.createElement('ratingValue')
-    const yearValue = movieData.year  = document.createElement('yearValue')
-    
-    const dislikesBtn = document.createElement('button');
-    
-    movideData2.className = 'movie-card';
-   
-    blockMovie.className = 'movie';
-    plotValue.className = 'plotValue';
-    castValue.className = 'castValue';
-    runtimeValue.className = 'runtimeValue';
-    ratingValue.className = 'ratingValue';
-    yearValue.className = 'yearValue'
-
-    movieData2.dataset.id = q.id
-    p.plot = q.plot;
-    p.cast = q.cast;
-    p.runtime = q.runtime
-    p.rating = q.rating;
-    p.year = q.year;
-
-    blockMovie.append(plotValue, castValue, runtimeValue, ratingValue, yearValue, dislikesBtn);
-    movieData2.append(blockMovie);
-    movieData1.append(movieData2);
-
-    dislikesBtn.year = 'Delete';
-    dislikesBtn.className = 'btn-danger';
-    dislikesBtn.addEventListener('click', () => deleteQuote())
-
-     function deleteQuote(){
-        const url = https://poddyman0.github.io/JavaScript3.js;
-        const reqObj = { method: 'DELETE' };
-        fetch(src, reqObj)
-        .then( movieData2.remove() )
-      }
-   }
-}
-</script>
+<!DOCTYPE html>
 <html>
-<h1>movie data</h1>
-  <div>
-    <div>
-        <script src="src/index.js"></script>
-        <ul id="MovieData"></ul>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Founders and Coders Movie Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="stylesheets/main.css" rel="stylesheet" />
+    <link href="stylesheets/header.css" rel="stylesheet" />
+    <link href="stylesheets/home.css" rel="stylesheet" />
+    <link href="stylesheets/large_card.css" rel="stylesheet" />
+    <link href="stylesheets/moive_nav.css" rel="stylesheet" />
+    <link href="stylesheets/form.css" rel="stylesheet" />
+    <script type="module" src="./js/main.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+  </head>
+  <body id="body">
+    <div class="page_container_flexbox" id="page_container_flexbox">
+      <header class="header__container" id="header__container">
+        <a class="header_logo_container" href="./index.html"
+          ><img class="header__logo" src="./img/movie_databse_logo6.svg" alt="Movie Database Logo" />
+        </a>
+      </header>
+      <main class="main" id="main"></main>
     </div>
-    <div>
-        <form id="new-movie-form">
-          <div class="form-group">
-            <label for="new-movie">New movie</label>
-            <input type="text" class="form-control" id="new-movie" placeholder="Movie:">
-          </div>
-          <div class="form-group">
-            <label for="new-plot">Author</label>
-            <input type="text" class="form-control" id="new-plot" placeholder="Plot:">
-          </div>
-          <div class="form-group">
-            <label for="new-cast">Author</label>
-            <input type="text" class="form-control" id="new-cast" placeholder="cast:">
-          </div>
-          <div class="form-group">
-            <label for="new-runtime">Author</label>
-            <input type="text" class="form-control" id="new-runtime" placeholder="runtime:">
-          </div>
-          <div class="form-group">
-            <label for="new-rating">Author</label>
-            <input type="text" class="form-control" id="new-rating" placeholder="rating: ">
-          </div>
-          <div class="form-group">
-            <label for="new-year">Author</label>
-            <input type="text" class="form-control" id="new-year" placeholder="year: ">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-      <script>
-      const form = document.querySelector('#new-movie-form');
-      form.addEventListener('submit', (e)=>postMovie(e))
-      function postMovie(e) {
-        e.preventDefault();
-        const newMovie = document.querySelector('#new-quote').value;
-        const newPlot = document.querySelector('#new-plot').value;
-        const newCast = document.querySelector('#new-cast').value;
-        const newRuntime = document.querySelector('#new-runtime').value;
-        const newRating = document.querySelector('#new-rating').value;
-        const newYear = document.querySelector('#new-year').value;
-      }
-    const url = https://poddyman0.github.io/JavaScript3.js;
-    const reqObj = {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        movie: newMovie,
-        plot: newAuthor,
-        cast: newCast,
-        runtime: newRuntime,
-        rating: newRating,
-        year: newYear
-      })
-    }
-fetch(src, reqObj)
-.then(resp => resp.json())
-.then(data => render movieData([data]))
-    </script>
-  <hr>
+    <nav class="moive_nav" id="moive_nav">
+      <button class="moive_nav__left" id="moive_nav__left">
+        <img src="./img/left_arrow.svg" />
+      </button>
+      <button class="moive_nav__right" id="moive_nav__right">
+        <img src="./img/right_arrow.svg" />
+      </button>
+      <div class="movie_nav__card_container" id="movie_nav__card_container"></div>
+    </nav>
+  </body>
 </html>
-
-
-#Allow the user to affect the display of the data by interacting with the webpage
-  
-  

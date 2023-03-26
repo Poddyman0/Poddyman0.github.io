@@ -1,0 +1,131 @@
+.form__container {
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 60rem;
+  background: var(--bg-darker-blue);
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--text-primary-white);
+}
+@media only screen and (max-width: 451px) {
+  .form__container {
+    margin: 1rem auto 5rem auto;
+  }
+}
+
+.form_play_img {
+  display: block;
+  width: 4rem;
+  margin: 1rem auto;
+}
+
+.form__h2 {
+  display: block;
+  text-align: center;
+  margin: 1rem;
+}
+
+.form_input__text,
+.form_input__text_small,
+.form_input__textarea {
+  display: block;
+  border: none;
+  outline: none;
+  background: var(--bg-dark-blue);
+  width: 90%;
+  margin: 1.5rem auto;
+  border-radius: 1rem;
+  color: var(--text-secondary-grey);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+}
+
+.form__small_wrapper {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.form_input__number {
+  display: block;
+  flex-grow: 1;
+  flex-basis: 12rem;
+  -webkit-flex-grow: 1;
+  border: none;
+  outline: none;
+  background: var(--bg-dark-blue);
+  border-radius: 1rem;
+  color: var(--text-secondary-grey);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.form_input__textarea {
+  resize: none;
+  overflow-y: scroll;
+}
+
+.form_input__file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.form__input_file_label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: var(--bg-dark-blue);
+  width: 90%;
+  height: 3rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.form__input_file_img {
+  display: block;
+  width: auto;
+  height: 2rem;
+  margin: 1rem;
+}
+
+.form__input_file_text {
+  flex-grow: 2;
+  height: 100%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.65rem 0;
+  color: rgb(206, 206, 216, 0.5);
+}
+
+.form__submit_button {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary-white);
+  background: var(--primary-green);
+  border: none;
+  border-radius: 0.5rem;
+}
