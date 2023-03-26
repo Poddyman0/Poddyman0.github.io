@@ -5,8 +5,6 @@ export const createNavButton = ({
   containerId,
   imgClass,
   imgId,
-  imgSrc,
-  imgAlt,
   pClass,
   pId,
   pText,
@@ -15,8 +13,6 @@ export const createNavButton = ({
 }) => {
   const navImg = createElement("img", {
     class: imgClass,
-    src: imgSrc,
-    alt: imgAlt,
     id: imgId,
   });
 
