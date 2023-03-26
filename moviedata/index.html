@@ -1,125 +1,185 @@
-<script url='https://poddyman0.github.io/moviedata/JavaScript3.js'>
-    
-document.addEventListener('JavaScript3.js', ()=>{ all your code })
- function fetchData() {
-    fetch('https://poddyman0.github.io/moviedata/JavaScript3.js')
-    .then( response => response.json() )
-    .then( data => render movieData(data) ) 
+<script>
+function fetchData() {
+  fetch('https://poddyman0.github.io/moviedata/JavaScript3.js')
+    .then(response => response.json())
+    .then(data => renderMovieData(data));
 }
-function render movieData(data) {
-for (const q of data) {
-    const movieData1 = movieData.querySelector('#movie-list');
 
-    const movieData2 = movideData = document.createElement('Movie Data');
-    const blockMovie = document.createElement('movie');
-    const plotValue = movieData.plot = document.createElement('plotValue')
-    const castValue = movieData.cast = document.createElement('castValue')
-    const runtimeValue = movieData.runtime  = document.createElement('runtimeValue')
-    const ratingValue = movieData.rating  = document.createElement('ratingValue')
-    const yearValue = movieData.year  = document.createElement('yearValue')
-    
+function renderMovieData(data) {
+  const movieData1 = document.querySelector('#movie-list');
+
+  for (const q of data) {
+    const movieData2 = document.createElement('div');
+    const blockMovie = document.createElement('div');
+    const plotValue = document.createElement('div');
+    const castValue = document.createElement('div');
+    const runtimeValue = document.createElement('div');
+    const ratingValue = document.createElement('div');
+    const yearValue = document.createElement('div');
     const dislikesBtn = document.createElement('button');
-    
-    movideData2.className = 'movie-card';
-   
+
+    movieData2.className = 'movie-card';
     blockMovie.className = 'movie';
     plotValue.className = 'plotValue';
     castValue.className = 'castValue';
     runtimeValue.className = 'runtimeValue';
     ratingValue.className = 'ratingValue';
-    yearValue.className = 'yearValue'
+    yearValue.className = 'yearValue';
 
-    movieData2.dataset.id = q.id
-    p.plot = q.plot;
-    p.cast = q.cast;
-    p.runtime = q.runtime
-    p.rating = q.rating;
-    p.year = q.year;
+    movieData2.dataset.id = q.id;
+    plotValue.textContent = q.plot;
+    castValue.textContent = q.cast;
+    runtimeValue.textContent = q.runtime;
+    ratingValue.textContent = q.rating;
+    yearValue.textContent = q.year;
 
     blockMovie.append(plotValue, castValue, runtimeValue, ratingValue, yearValue, dislikesBtn);
     movieData2.append(blockMovie);
     movieData1.append(movieData2);
 
-    dislikesBtn.year = 'Delete';
+    dislikesBtn.textContent = 'Delete';
     dislikesBtn.className = 'btn-danger';
-    dislikesBtn.addEventListener('click', () => deleteQuote())
-
-     function deleteQuote(){
-        const url = 'https://poddyman0.github.io/moviedata/JavaScript3.js';
-        const reqObj = { method: 'DELETE' };
-        fetch(src, reqObj)
-        .then( movieData2.remove() )
-      }
-   }
+    dislikesBtn.addEventListener('click', () => deleteQuote(movieData2, q.id));
+  }
 }
+
+function deleteQuote(movieData2, id) {
+  const url = `https://poddyman0.github.io/moviedata/JavaScript3.js?id=${id}`;
+  const reqObj = { method: 'DELETE' };
+  fetch(url, reqObj)
+    .then(response => {
+      if (response.ok) {
+        movieData2.remove();
+      }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', fetchData);
 </script>
 <html>
-<h1>movie data</h1>
+  <h1>movie data</h1>
   <div>
     <div>
-        <script url= 'https://poddyman0.github.io/moviedata/JavaScript3.js'></script>
-        <ul id="MovieData"></ul>
+      <ul id="movie-list"></ul>
     </div>
     <div>
-        <form id="new-movie-form">
-          <div class="form-group">
-            <label for="new-movie">New movie</label>
-            <input type="text" class="form-control" id="new-movie" placeholder="Movie:">
-          </div>
-          <div class="form-group">
-            <label for="new-plot">new plot</label>
-            <input type="text" class="form-control" id="new-plot" placeholder="Plot:">
-          </div>
-          <div class="form-group">
-            <label for="new-cast">new cast</label>
-            <input type="text" class="form-control" id="new-cast" placeholder="cast:">
-          </div>
-          <div class="form-group">
-            <label for="new-runtime">new runtime</label>
-            <input type="text" class="form-control" id="new-runtime" placeholder="runtime:">
-          </div>
-          <div class="form-group">
-            <label for="new-rating">new rating</label>
-            <input type="text" class="form-control" id="new-rating" placeholder="rating: ">
-          </div>
-          <div class="form-group">
-            <label for="new-year">new year</label>
-            <input type="text" class="form-control" id="new-year" placeholder="year: ">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-      <script>
-      const form = document.querySelector('#new-movie-form');
-      form.addEventListener('submit', (e)=>postMovie(e))
-      function postMovie(e) {
-        e.preventDefault();
-        const newMovie = document.querySelector('#new-quote').value;
-        const newPlot = document.querySelector('#new-plot').value;
-        const newCast = document.querySelector('#new-cast').value;
-        const newRuntime = document.querySelector('#new-runtime').value;
-        const newRating = document.querySelector('#new-rating').value;
-        const newYear = document.querySelector('#new-year').value;
+      <form id="new-movie-form">
+        <div class="form-group">
+          <label for="new-movie">Movie</label>
+          <input type="text" class="form-control" id="new-movie" placeholder="Movie">
+        </div>
+        <div class="form-group">
+          <label for="new-plot">Plot</label>
+          <input type="text" class="form-control" id="new-plot" placeholder="Plot">
+        </div>
+        <div class="form-group">
+          <label for="new-cast">Cast</label>
+          <input type="text" class="form-control" id="new-cast" placeholder="Cast">
+        </div>
+        <div class="form-group">
+          <label for="new-runtime">Runtime</label>
+          <input type="text" class="form-control" id="new-runtime" placeholder="Runtime">
+        </div>
+        <div class="form-group">
+          <label for="new-rating">Rating</label>
+          <input type="text" class="form-control" id="new-rating" placeholder="Rating">
+        </div>
+        <div class="form-group">
+          <label for="new-year">Year</label>
+          <input type="text" class="form-control" id="new-year" placeholder="Year">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script>
+      const movieList = document.querySelector('#movie-list');
+
+      // Fetch movie data from server and render it
+      function fetchMovieData() {
+        fetch('https://poddyman0.github.io/moviedata/JavaScript3.js')
+          .then(response => response.json())
+          .then(data => renderMovieData(data));
       }
-    const url = 'https://poddyman0.github.io/moviedata/JavaScript3.js';
+
+      // Render movie data to the UI
+      function renderMovieData(data) {
+        movieList.innerHTML = '';
+
+        data.forEach(movie => {
+          const movieCard = document.createElement('div');
+          movieCard.className = 'movie-card';
+
+          const movieDetails = document.createElement('div');
+          movieDetails.className = 'movie-details';
+
+          const movieTitle = document.createElement('h2');
+          movieTitle.textContent = movie.movie;
+
+          const moviePlot = document.createElement('p');
+          moviePlot.textContent = `Plot: ${movie.plot}`;
+
+          const movieCast = document.createElement('p');
+          movieCast.textContent = `Cast: ${movie.cast}`;
+
+          const movieRuntime = document.createElement('p');
+          movieRuntime.textContent = `Runtime: ${movie.runtime}`;
+
+          const movieRating = document.createElement('p');
+          movieRating.textContent = `Rating: ${movie.rating}`;
+
+          const movieYear = document.createElement('p');
+          movieYear.textContent = `Year: ${movie.year}`;
+      
+          const deleteBtn = document.createElement('button');
+          deleteBtn.textContent = 'Delete';
+          deleteBtn.className = 'btn btn-danger';
+          deleteBtn.addEventListener('click', () => deleteMovie(movie.id));
+
+          movieDetails.append(movieTitle, moviePlot, movieCast, movieRuntime, movieRating, movieYear, deleteBtn);
+          movieCard.append(movieDetails);
+          movieList.append(movieCard);
+        });
+      }
+        function deleteMovie(movieId) {
+        const url = `https://poddyman0.github.io/moviedata/JavaScript3.js/${movieId}`;
+        const reqObj = { method 'DELETE' };
+    fetch(url, reqObj)
+    .then( resp => movieData2.remove() )
+}
+                        
+  const form = document.querySelector('#new-movie-form');
+  form.addEventListener('submit', postMovie); // Use function reference instead of arrow function
+  function postMovie(e) {
+    e.preventDefault();
+    const newMovie = document.querySelector('#new-movie').value; // Use correct ID for new movie input
+    const newPlot = document.querySelector('#new-plot').value;
+    const newCast = document.querySelector('#new-cast').value;
+    const newRuntime = document.querySelector('#new-runtime').value;
+    const newRating = document.querySelector('#new-rating').value;
+    const newYear = document.querySelector('#new-year').value;
+
+    const url = 'https://poddyman0.github.io/moviedata/JavaScript3.js'; // Fix URL
     const reqObj = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         movie: newMovie,
-        plot: newAuthor,
+        plot: newPlot, // Use correct variable name
         cast: newCast,
         runtime: newRuntime,
         rating: newRating,
         year: newYear
       })
-    }
-fetch(src, reqObj)
-.then(resp => resp.json())
-.then(data => render movieData([data]))
-    </script>
-  <hr>
-</html>
+    };
+    fetch(url, reqObj) // Fix variable name
+      .then(resp => resp.json())
+      .then(data => renderMovieData([data])) // Use correct function name
+      .catch(error => console.error(error)); // Add error handling
+  }
+</script>
+
+          
+
 
 
 #Allow the user to affect the display of the data by interacting with the webpage
