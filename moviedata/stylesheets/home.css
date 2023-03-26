@@ -1,5 +1,12 @@
-
 @media only screen and (max-width: 451px) {
+  .home__bg_img {
+    position: absolute;
+    width: auto;
+    max-height: 60vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .homepage_text {
