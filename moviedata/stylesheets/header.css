@@ -64,7 +64,7 @@
   display: inline-block;
   font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   font-weight: 400;
-  color: var(--text-primary-white);
+  color: var(--text-primary-black);
   padding: 0 0.4rem;
 }
 
@@ -72,7 +72,7 @@
   position: absolute;
   display: block;
   width: 100%;
-  background: var(--bg-darker-blue);
+  background: var(--bg-primary-white);
   overflow: visible;
   z-index: 9999;
 }
@@ -80,14 +80,14 @@
 .nav__button_text__dropdown_container_HIDE {
   position: relative;
   display: none;
-  background: var(--bg-darker-blue);
+  background: var(--bg-primary-white);
   z-index: 999;
 }
 
 .nav__button_text__dropdown {
   position: relative;
   display: block;
-  color: var(--text-primary-white);
+  color: var(--text-primary-black);
   font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   font-weight: 400;
   margin: 0.5rem;
