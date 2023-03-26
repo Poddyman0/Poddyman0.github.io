@@ -38,6 +38,7 @@
 
 .moive_nav__img {
   display: block;
+  clip-path: circle(50% at 50% 50%);
   width: 8rem;
   height: 8rem;
   margin: 0.25rem 1rem;
