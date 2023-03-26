@@ -31,8 +31,6 @@ export const createFormInputs = () => {
 
   const fileLabelImg = createElement('img', {
     class: 'form__input_file_img',
-    src: './img/upload_image.svg',
-    alt: 'Upload image',
   });
 
   const fileLabelText = createElement(
