@@ -58,7 +58,7 @@
   text-align: center;
   max-width: 12rem;
   max-height: 3.5rem;
-  color: var(--text-secondary-grey);
+  color: var(--text-primary-black);
   font-size: 1.3rem;
   font-weight: 700;
   margin: 0rem auto;
@@ -66,7 +66,7 @@
 
 .moive_nav__film_year {
   text-align: center;
-  color: var(--text-tertiary-grey);
+  color: var(--text-primary-black);
   font-size: 1.3rem;
   font-weight: 700;
   max-width: 12rem;
