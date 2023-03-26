@@ -1,1 +1,3 @@
-readme
+Project Gallery Description:
+
+This is a piece of code written in HTML, which is used to create a webpage. It includes a header, navigation menu, main content section, and some styling information for the page. The navigation menu includes links to different pages of the website. The main content section has four boxes, each containing a title, a brief description, an image, and a hidden paragraph that is revealed when the user clicks on the "click here to find out more" link. The styling information is used to organize these four boxes into a responsive layout using Flexbox, and also to apply some visual styles to the boxes.
