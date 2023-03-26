@@ -3,7 +3,6 @@ import { createElement } from '../createElement.js'
 export const createFormHeader = () => {
   const formImage = createElement('img', {
     class: 'form_play_img',
-    src: './img/play.svg',
   })
 
   const formH2 = createElement(
