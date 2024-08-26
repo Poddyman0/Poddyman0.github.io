@@ -1,3 +1,0 @@
-Moive Data Description:
-
-The project called "Movie Data" has been created using HTML, Javascript, and CSS, and the movie data is stored locally. The file reader API is used to read and store a movie image, which can be uploaded using a form when adding a new movie. To sort the movies, the code includes logic to sort by numbers or text, providing ascending and descending order functionality for year, title, and rating. A utility function has been implemented to improve the readability of the code and speed up development when creating DOM elements. The website heavily relies on DOM manipulation to show or hide elements when navigating around.

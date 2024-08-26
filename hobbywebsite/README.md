@@ -1,3 +1,0 @@
-Hobby Page Description: 
-
-This code is an HTML code that creates a webpage about rock climbing. It includes a header that states "George Mitchell's website," a navigation bar at the top of the page that links to different pages within the website, and a main section that contains information about rock climbing. The information is presented in different sections, such as "What is rock climbing?" and "Here is a list of the best three rock climbers in history." There are also images included in the page, such as a photo of a rock climber. The code uses different styles to change the appearance of the page, such as changing font faces and colors, and adding borders to some sections.
