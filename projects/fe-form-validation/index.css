@@ -1,0 +1,119 @@
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: rgb(255, 138, 138);
+    box-shadow: 0 0 3.5px 3px rgb(255, 138, 138);
+}
+
+p {
+    color: rgb(255, 138, 138);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4vh;
+}
+
+body {
+    background-image: url("./pic.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional - to fix the background image */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    background-color:rgb(22, 19, 85);
+    text-align: center;
+    font-size: 9vh;
+}
+
+
+.firstNameBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.lastNameBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.phoneNumberBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.emailBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+#email {
+    width: 40%;
+}
+
+.usernameBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.passwordBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.avatarImgURLBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+#avatarImgURL {
+    width: 60%;
+}
+
+.submitButtonBackground {
+    margin: auto;
+    background-color: rgb(108, 102, 230);
+    border: 5px solid;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+#submitButton {
+    width: 20vh;
+    height: 5vh;
+}
+

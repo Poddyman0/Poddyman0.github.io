@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="index.css">
+<meta http-equic="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" contents="width=device-width, initial-scale=1">
+<title>Who wants to be a coder?</title>
+<script src="./index.js" defer></script>
+
+</html>
+
+<head>
+
+<body>
+    <h1>Sign up to who wants to be a coder quiz</h1>
+    <form id="userForm" action="./coder.html" method="get">
+        <div class="firstNameBackground">
+            <label for="firstName">First name:</label>
+            <br>
+            <input name="firstName" id="firstName" type="text" required>
+            <p id="firstNameError"></p>
+            <br>
+            <img src="./person-circle.svg" alt="person" height="40" width="40">
+        </div>
+        <div class="lastNameBackground">
+            <label for="lastName">Last name:</label>
+            <br>
+            <input name="lastName" id="lastName" type="text" required>
+            <p id="lastNameError"></p>
+            <br>
+            <img src="./person-circle.svg" alt="person" height="40" width="40">
+        </div>
+        <div class="phoneNumberBackground">
+            <label for="phoneNumber">Phone Number:</label>
+            <br>
+            <input type="phoneNumber" id="phoneNumber" name="phoneNumber" minlength="11" required />
+            <p id="phoneNumberError"></p>
+            <br>
+            <img src="./telephone.svg" alt="telephone" height="40" width="40">
+        </div>
+        <div class="emailBackground">
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email" required />
+            <p id="emailError"></p>
+            <br>
+            <img src="./envelope.svg" alt="envelope" height="40" width="40">
+        </div>
+        <div class="usernameBackground">
+            <label for="username">Username:</label>
+            <br>
+            <input name="username" id="username" type="text">
+            <p id="usernameError"></p>
+            <br>
+            <img src="./person-circle.svg" alt="person" height="40" width="40">
+        </div>
+        <div class="passwordBackground">
+            <label for="pass">Password (8 characters minimum):</label>
+            <br>
+            <input type="password" id="password" name="password" minlength="8" required />
+            <p id="passwordError"></p>
+            <br>
+            <img src="./file-lock2.svg" alt="file-lock" height="40" width="40">
+        </div>
+        <div class="avatarImgURLBackground">
+            <label for="avatarImgURL">Avatar image URL:</label>
+            <br>
+            <input name="avatarImgURL" id="avatarImgURL" type="text">
+            <p id="avatarImgURLError"></p>
+            <br>
+            <img src="./card-image.svg" alt="card-image" height="40" width="40">
+        </div>
+        <div class="submitButtonBackground">
+            <button id="submitButton"type="submit">Submit</button>
+            <br>
+            <br>
+            <img src="./send.svg" alt="send" height="40" width="40">
+        </div>
+        <!-- <input type="hidden" id="postId" name="postId" value="34657" /> -->
+    </form>
+    </main>
+    <footer></footer>
+</body>
+</head>

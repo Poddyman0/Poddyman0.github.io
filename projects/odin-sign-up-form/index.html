@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault()
+                const password = document.querySelector('#password')
+                const passwordConfirmation = document.querySelector('#confirm-password')
+                const errorMessage = document.querySelector('#error-message')
+                if (password.value !== passwordConfirmation.value) {
+                    password.style.border = '2px solid red';
+                    passwordConfirmation.style.border = '2px solid red';
+                    errorMessage.innerHTML = "*Passwords do not match"
+
+                } else if (password.value === passwordConfirmation.value) {
+                    password.style.border = '2px solid green';
+                    passwordConfirmation.style.border = '2px solid green';
+                    errorMessage.innerHTML = ""
+                };
+            })     
+        })
+
+    </script>
+    <div class="window-container">
+        <div class="left">
+            <div class="spacer-top"></div>
+            <div class="translucent-box">
+                    <h1 class="odin">
+                        <img src="immages/odin-lined.png" alt="odin-project-graphic">
+                        ODIN
+                        
+                    </h1>
+            </div>
+
+            <p class="img-copyright">
+                Photo by Halie West on Unsplash
+            </p>
+        </div>
+        <div class="right">
+            <div class="top">
+                <strong>
+                <div>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams. 
+                    <br>
+                    Sign up <span class="italic">now</span> to get started.</div>
+                <br>
+                <div>You <span class="italic">know</span> you want to.</div>
+            </strong>
+            </div>
+            <div class="middle">
+                <h1 class="form-heading">Let's do this!</h1>
+                    <form class="middle-container">
+                        <strong>
+                        <div class="form-left">
+                            <label for="first-name">FIRST NAME</label>
+                            <br>
+                            <input id="first-name" type="text" required>
+                            <br>
+                            <br>
+                            <label for="email">EMAIL</label>
+                            <br>
+                            <input id="email" type="email" required>
+                            <br>
+                            <br>
+                            <label for="password">PASSWORD</label>
+                            <br>
+                            <input id="password" type="password">
+                            <p id="error-message"></p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <button class="submit" type="submit" ><strong>Create Account</strong></button>
+
+                        </div>
+                        <div class="form-right">
+                            <label for="last-name">LASTNAME</label>
+                            <br>
+                            <input id="last-name" type="text">
+                            <br>
+                            <br>
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <br>
+                            <input id="phone-number" type="tel">
+                            <br>
+                            <br>
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <br>
+                            <input id="confirm-password" type="password">
+                        </strong>
+                        </div>
+                        
+                    </form>
+            </div>
+            <div class="bottom">
+                <p class="log-in">Aleady have an account? <a href="index.html"><strong>Log in</strong></a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+#search {
+    position:fixed;
+    top: 0;
+    right: 0;
+}
+
+form {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+}
+
+
+form {
+    position: left;
+}
+
+.right {
+    position: right;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 15%;
+
+    
+}
+
+.left {
+    position: left;
+}
+
+input[type="submit"] {
+    position: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 15%;
+
+}
+
+#submit {
+    background-color:dodgerblue;
+    color: white;
+}
+

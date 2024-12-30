@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <h1>Etch-A-Sketch</h1>
+    <div class="container">
+        <div>
+            <button class="open-button" onclick="openForm()">Change Pixels</button>
+                <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <h1>Change Pixels</h1>
+                    <input id="pixels" name="pixels" type="pixels" required placeholder="Enter number of pixels here." autofocus type="number" min="1" max="100"></input>
+                    <br>
+                    <br>
+                    <button type="submit" value="Submit" class="pixelateButton">Enter</button>
+                    <br>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+                </div>
+        </div>
+        <br>
+        <div id="grid-container"></div>
+        <br>
+        <div>
+            <button value="randomise" id="randomise">Randomise Colour</button>
+            <button value="black" id="black">Black colour</button>
+            <button value="progressive-darkening" id="progressive-darkening">Progressive Darkening</button>
+        </div>
+    </div>
+    <script>
+        let pixelsNum = 16;
+        let colour = 'black';
+        let totalSelextedPixel = 0;
+
+        const gridContainer = document.getElementById('grid-container')
+
+        document.addEventListener('DOMContentLoaded', function() {
+            changePixels(gridContainer)
+            renderPixels(gridContainer)
+            blackColour(gridContainer)
+            randomColour(gridContainer)
+
+        })
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+            }
+
+        function renderPixels(gridContainer) {
+                totalSelectedPixel = pixelsNum * pixelsNum;
+                gridContainer.innerHTML = ''
+                for (let i = 0; i < totalSelectedPixel; i++) {
+                const gridPixel = document.createElement('div');
+                gridPixel.id = `grid-pixel-id-${i}`;
+                gridPixel.classList.add("grid-pixel"); 
+                let width = 700 / pixelsNum;
+                let height = 700 / pixelsNum;
+                gridPixel.style.width = `${width}px`
+                gridPixel.style.height = `${height}px`
+                gridContainer.append(gridPixel);
+                document.querySelector(`#grid-pixel-id-${i}`).addEventListener('mouseover', function(gridContainer) {
+                    const gridPixelHovered = document.querySelector(`#grid-pixel-id-${i}`);
+                    gridPixelHovered.style.backgroundColor = `${colour}`;
+            })
+            }
+        }
+
+        function changePixels(gridContainer) {
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault()
+                const selectedPixelNum = document.querySelector('#pixels').value;
+                pixelsNum = selectedPixelNum;
+                renderPixels(gridContainer)
+            })
+        }
+
+        function randomColour(gridContainer) {
+            document.querySelector('#randomise').addEventListener('click', function() {
+                colour = `hsl(${Math.random() * 360}, 100%, 50%)`
+
+        })
+        }
+
+        function blackColour(gridContainer) {
+            document.querySelector('#black').addEventListener('click', function() {
+                colour = 'black'
+        })
+        }
+
+        function shadesOfGreyColour() {
+            document.querySelector('#progressive-darkening').addEventListener('click', function() {
+        }) 
+        }
+
+    </script>
+  </body>
+</html>

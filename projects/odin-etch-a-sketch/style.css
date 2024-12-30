@@ -1,0 +1,125 @@
+body {
+    font-family: "Roboto", sans-serif;
+
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#grid-container {
+    border: 2px solid black;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-size: 18px;
+    font-style: bold;
+    border-radius: 0.3cm;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-color: #3882F6;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-style: bold;
+}
+
+{box-sizing: border-box;}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 35%;
+  right: 35%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.pixelateButton {
+    background-color: #04AA6D;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    position: center
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#pixels {
+    text-align: center;
+    width: 240px;
+    height: 50px;
+    font-size: large;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  position: center
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

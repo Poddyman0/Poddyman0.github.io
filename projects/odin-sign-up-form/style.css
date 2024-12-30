@@ -1,0 +1,145 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.window-container {
+    display: flex;
+}
+
+.left {
+    box-sizing: border-box;
+    width: 35vw;
+    background-image: url('immages/photo-1585202900225-6d3ac20a6962.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.right {
+    box-sizing: border-box;
+    width: 62vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: row;
+    font-style: bold;
+}
+
+.form-left {
+    padding-right: 3vw
+}
+
+.top {
+    height: 20vh;
+    background-color: rgb(246, 245, 245);
+    padding-left: 3vw;
+    padding-top: 10vh;
+    font-size: 20px;
+    width: 62vw;
+    font-style: bold;
+}
+
+.middle {
+    height: 30vh;
+    background-color: white;
+    padding-left: 3vw;
+    box-shadow: 0 5px 10px rgba(72, 72, 72, 0.49); 
+    z-index: 1;
+    width: 62vw;
+    padding-bottom: 8vh
+
+}
+
+.bottom {
+    height: 20vh;
+    background-color: rgb(246, 245, 245);
+    padding-left: 3vw;
+    padding-top: 12vh;
+    width: 62vw;
+}
+
+label {
+    color: rgb(93, 93, 93);
+    padding-top: 20px;
+}
+
+input {
+    width: 20vw;
+    height: 3vh;
+    border-radius: 0.2cm;
+    border: 2px solid #E5E7EB;
+    color: rgb(93, 93, 93);
+}
+
+input:focus {
+    width: 20vw;
+    height: 3vh;
+    border-radius: 0.2cm;
+    border: 2px solid blue;
+    color: rgb(93, 93, 93);
+    outline: none;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.49); 
+
+}
+
+.italic {
+    font-style: italic;
+}
+
+.submit {
+    background-color: #596D48;
+    color: white;
+    border-radius: 0.2cm;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+img {
+    width: 8vh
+}
+
+.odin {
+    font-size: 8vh;
+}
+
+.spacer-top {
+    padding-bottom: 11.5vh;
+}
+
+.translucent-box {
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.img-copyright {
+ padding-top: 62vh;
+}
+
+.form-heading {
+    font-size: 150%;
+}
+
+.log-in {
+    font-size: 20px;
+}
+
+a {
+    color: #596D48;
+    text-decoration: none;
+
+}
+
+#error-message {
+    color: red;
+    font-size: 12px;
+}
