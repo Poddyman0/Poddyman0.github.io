@@ -3394,6 +3394,131 @@
                       }
                     }
                 });
+              //
+                              //
+                let multerSelected = document.querySelector('#Multierfilter')
+                multerSelected.addEventListener('change', function(event) {
+                  event.preventDefault();
+                    if (event.target.checked === true) {
+
+                      for (let i = 0; i < projects.length; i++) {
+                        projects[i].skills.forEach(function (skill) {
+                          if (skill === "Multer" && projects[i].displayed === false) {
+                            projects[i].displayed = true;
+                            portfilioCardContainerCard.innerHTML += `
+                              <div class="col" id="portfolioCard">
+                                <div class="card border border rounded-4 portfolio-card" id="portfolioCardGrower" value="portfolioCardGrower">
+                                  <img src="${projects[i].imageSRC}" class="card-img-top clip-pic" alt="${projects[i].title}">
+                                  <div class="card-body">
+                                    <h5 class="card-title">${projects[i].title}</h5>
+                                    <p class="card-text">${projects[i].description}</p>
+                                    <p>Skills:</p>
+                                    <ul id="skillList">
+                                      ${projects[i].skills.map(skill => `<li>${skill}</li>`).join('')}
+                                    </ul>
+                                    <a href="${projects[i].githubrepolink}" class="btn btn-primary">Github <img class="img-fluid" src="icons/github.svg" alt="github image"></a>
+                                    <a href="${projects[i].livedemolink}" class="btn btn-primary">Live Demo <img class="img-fluid" src="icons/Website-595b40b65ba036ed117d1b25.svg" alt="website image"></a>
+                                  </div>
+                                </div>
+                              </div>`;
+                              let portfolioCards = document.querySelectorAll('#portfolioCardGrower');
+                                portfolioCards.forEach(function(portfolioCard) {
+                                  portfolioCard.addEventListener('mouseenter', function() {
+                                    portfolioCard.style.width = 'calc(100% + 2%)';
+                                    portfolioCard.style.height = 'calc(100% + 5%)';
+                                  });
+
+                                  portfolioCard.addEventListener('mouseleave', function() {
+                                    portfolioCard.style.width = '100%';
+                                    portfolioCard.style.height = '100%';
+                                  });
+                                });
+                          }
+                        });
+                      }
+                    } else if (event.target.checked === false) {
+                      let cards = portfilioCardContainerCard.getElementsByClassName("col");
+                      for (let i = 0; i < cards.length; i++) {
+                        let currentCard = cards[i];
+                        let cardSkills = currentCard.querySelectorAll("#skillList li");
+                        cardSkills.forEach(function (skill) {
+                          if (skill.textContent === "Multer") {
+                            currentCard.style.display = "none";
+                          }
+                        });
+                      }
+                      for (let i = 0; i < projects.length; i++) {
+                        projects[i].skills.forEach(function (skill) {
+                          if (skill === "Multer" && projects[i].displayed === true) {
+                            projects[i].displayed = false;
+                          }
+                        })
+                      }
+                    }
+                });
+                //
+                //
+                let cloudinarySelected = document.querySelector('#CloudinaryFilter')
+                cloudinarySelected.addEventListener('change', function(event) {
+                  event.preventDefault();
+                    if (event.target.checked === true) {
+
+                      for (let i = 0; i < projects.length; i++) {
+                        projects[i].skills.forEach(function (skill) {
+                          if (skill === "Cloudinary" && projects[i].displayed === false) {
+                            projects[i].displayed = true;
+                            portfilioCardContainerCard.innerHTML += `
+                              <div class="col" id="portfolioCard">
+                                <div class="card border border rounded-4 portfolio-card" id="portfolioCardGrower" value="portfolioCardGrower">
+                                  <img src="${projects[i].imageSRC}" class="card-img-top clip-pic" alt="${projects[i].title}">
+                                  <div class="card-body">
+                                    <h5 class="card-title">${projects[i].title}</h5>
+                                    <p class="card-text">${projects[i].description}</p>
+                                    <p>Skills:</p>
+                                    <ul id="skillList">
+                                      ${projects[i].skills.map(skill => `<li>${skill}</li>`).join('')}
+                                    </ul>
+                                    <a href="${projects[i].githubrepolink}" class="btn btn-primary">Github <img class="img-fluid" src="icons/github.svg" alt="github image"></a>
+                                    <a href="${projects[i].livedemolink}" class="btn btn-primary">Live Demo <img class="img-fluid" src="icons/Website-595b40b65ba036ed117d1b25.svg" alt="website image"></a>
+                                  </div>
+                                </div>
+                              </div>`;
+                              let portfolioCards = document.querySelectorAll('#portfolioCardGrower');
+                                portfolioCards.forEach(function(portfolioCard) {
+                                  portfolioCard.addEventListener('mouseenter', function() {
+                                    portfolioCard.style.width = 'calc(100% + 2%)';
+                                    portfolioCard.style.height = 'calc(100% + 5%)';
+                                  });
+
+                                  portfolioCard.addEventListener('mouseleave', function() {
+                                    portfolioCard.style.width = '100%';
+                                    portfolioCard.style.height = '100%';
+                                  });
+                                });
+                          }
+                        });
+                      }
+                    } else if (event.target.checked === false) {
+                      let cards = portfilioCardContainerCard.getElementsByClassName("col");
+                      for (let i = 0; i < cards.length; i++) {
+                        let currentCard = cards[i];
+                        let cardSkills = currentCard.querySelectorAll("#skillList li");
+                        cardSkills.forEach(function (skill) {
+                          if (skill.textContent === "Cloudinary") {
+                            currentCard.style.display = "none";
+                          }
+                        });
+                      }
+                      for (let i = 0; i < projects.length; i++) {
+                        projects[i].skills.forEach(function (skill) {
+                          if (skill === "Cloudinary" && projects[i].displayed === true) {
+                            projects[i].displayed = false;
+                          }
+                        })
+                      }
+                    }
+                });
+                //
 
               })
                 //
@@ -3544,6 +3669,12 @@
                   <div class="form-check form-switch">
                     <input class="form-check-input" value="SocketIOfilter" id="SocketIOfilter" type="checkbox">Socket.IO</input>
                   </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" value="CloudinaryFilter" id="CloudinaryFilter" type="checkbox">Cloudinary</input>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" value="Multerfilter" id="Multerfilter" type="checkbox">Multer</input>
+                  </div> 
                 </div>
               </div>
             </div> 
