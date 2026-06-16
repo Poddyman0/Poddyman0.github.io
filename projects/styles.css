@@ -1,0 +1,179 @@
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px; /* 10 cells × 40px */
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(148, 148, 236);
+    display: flex;
+    justify-content: flex-start; /* horizontal → left */
+    align-items: flex-start;     /* vertical → top */
+    z-index: 1; /* puts it on top */
+
+  }
+
+  .playerShip {
+    cursor: grab;
+    z-index: 2; /* puts it on top */
+  }
+
+#playerShip1 {
+
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(255, 0, 0);
+}
+
+#playerShip2 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(255, 234, 0);
+}
+
+#playerShip3 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(72, 255, 0);
+}
+#playerShip4 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(0, 251, 255);
+}
+#playerShip5 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(0, 64, 255);
+}
+#playerShip6 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(234, 0, 255);
+}
+#playerShip7 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(119, 0, 255);
+}
+#playerShip8 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(245, 245, 245);
+}
+#playerShip9 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(7, 7, 7);
+}
+#playerShip10 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(140, 137, 137);
+}
+
+.computerShip {
+    cursor: grab;
+    z-index: 2; /* puts it on top */
+}
+
+#computerShip1 {
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(255, 0, 0);
+}
+
+#computerShip2 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(255, 234, 0);
+}
+
+#computerShip3 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(72, 255, 0);
+}
+
+#computerShip4 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(0, 251, 255);
+}
+
+#computerShip5 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(0, 64, 255);
+}
+
+#computerShip6 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(234, 0, 255);
+}
+
+#computerShip7 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(119, 0, 255);
+}
+
+#computerShip8 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(245, 245, 245);
+}
+
+#computerShip9 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(7, 7, 7);
+}
+
+#computerShip10 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(140, 137, 137);
+}
+
